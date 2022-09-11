@@ -43,6 +43,14 @@ request=(user_input) =>{
 
    })
 
+   let url_age=`https://api.agify.io/?name=${user_input.value}`;
+   fetch(url_age )
+   .then(result => result.json())
+   .then(data => {
+      age.innerHTML=`${data.age}`
 
+   })
+
+   
 
 }
