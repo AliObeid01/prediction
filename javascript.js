@@ -51,6 +51,13 @@ request=(user_input) =>{
 
    })
 
-   
+   let url_country = `https://api.nationalize.io/?name=${user_input.value}`;
+   fetch(url_country)
+   .then(result => result.json())
+   .then(data => {
+      country.innerHTML=
+      `<li>${data.country[0].country_id}</li>`+`<li>${data.country[1].country_id}</li>`+`<li>${data.country[2].country_id}</li>`
+ 
+   })
 
 }
