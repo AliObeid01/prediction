@@ -1,0 +1,63 @@
+body {
+    background-color:#384661;
+	color:#CCB49C;
+	
+}
+
+.main-container {
+    padding: 5% 33%;
+
+}
+
+.flex {
+    display: flex;
+    background: #CCB49C;
+	color:#272D47;
+
+}
+
+img{
+    width: 400px;
+    height: 200px;
+    object-fit: fill;
+
+}
+
+.center {
+    justify-content: center;
+    
+}
+
+button{
+
+    background-color: #272D47;
+	width: 20%;
+	border: none;
+	color: #CCB49C;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1vw;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: 5px 5px 5px 5px;
+
+}
+
+input[type=text]{
+    width: 30%;
+    height: 20%;
+    margin-top: 15px;
+    resize: vertical;
+  }
+
+  p {
+    padding-left: 20px;
+}
+
+.error{
+    color:red;
+
+}
+
