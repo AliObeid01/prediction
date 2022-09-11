@@ -1,13 +1,17 @@
 //declare the varaibles
 const image=document.getElementById("image");
+const ip=document.getElementById("ip");
 const gender=document.getElementById("gender");
 const age=document.getElementById("age");
 const country=document.getElementById("country");
 const predict=document.getElementById("predict");
+const bored=document.getElementById("bored");
+const activity=document.getElementById("activity");
 const error_message=document.getElementById("empty");
 
 //eventlistener to the button predict to get the data on click
 predict.addEventListener('click', getdata);
+bored.addEventListener('click', getactivty);
 
 //function onload to get a new image everytime the window is loaded
 window.onload=(loaded) =>{
@@ -19,6 +23,13 @@ window.onload=(loaded) =>{
      image.innerHTML=`<img src="${data.message}">`
 
    })
+   
+   axios.get('https://api.ipify.org/?format=json')
+   .then(response => {
+      ip.innerHTML=`Your IP Adress is ${response.data.ip}`
+   
+   });
+   
    
 }
 
@@ -34,6 +45,18 @@ function getdata(){
       request(user_input);//funtion request take the value of the user input and fetch the apis due to this value
     }
     
+}
+
+
+function getactivty(){
+
+   axios.get('https://www.boredapi.com/api/activity')
+   .then(response => {
+      activity.innerHTML=
+      `${response.data.activity}, its a ${response.data.type} activity with minimum ${response.data.participants} participants.`
+   
+   });
+ 
 }
 
 //call the funtion request

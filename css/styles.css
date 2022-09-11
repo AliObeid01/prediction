@@ -1,6 +1,7 @@
 body {
     background-color:#384661;
 	color:#CCB49C;
+    
 	
 }
 
@@ -17,7 +18,7 @@ body {
 }
 
 img{
-    width: 400px;
+    width: 100%;
     height: 200px;
     object-fit: fill;
 
